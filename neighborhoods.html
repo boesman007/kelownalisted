@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kelowna Neighbourhoods — Nick Van Rensburg, REALTOR®</title>
+  <meta name="description" content="Explore Kelowna's best neighbourhoods — Downtown, Lower Mission, Upper Mission, Glenmore, Rutland, and more. Find your perfect community with Nick Van Rensburg." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/neighborhoods.css" />
+</head>
+<body>
+
+  <!-- =========================================
+       NAVIGATION
+  ========================================= -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">
+          <img src="assets/Real%20Logo%20Outline%20Black.png" alt="Real Broker" class="nav-logo" />
+          <div class="nav-divider"></div>
+          <span class="nav-name">Nick Van Rensburg</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#search">Search</a>
+          <a href="neighborhoods.html" style="color:var(--cobalt);font-weight:700;">Neighbourhoods</a>
+          <a href="index.html#calculator">Calculator</a>
+          <a href="index.html#reviews">Reviews</a>
+          <a href="index.html#contact" class="nav-cta">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#about"      class="mobile-link">About</a>
+    <a href="index.html#search"     class="mobile-link">Search Listings</a>
+    <a href="neighborhoods.html"    class="mobile-link">Neighbourhoods</a>
+    <a href="index.html#calculator" class="mobile-link">Calculator</a>
+    <a href="index.html#reviews"    class="mobile-link">Reviews</a>
+    <a href="index.html#contact"    class="mobile-link">Contact</a>
+  </div>
+
+  <!-- =========================================
+       PAGE HERO
+  ========================================= -->
+  <section class="nbhd-hero">
+    <div class="container">
+      <div class="nbhd-hero-inner">
+        <div class="nbhd-breadcrumb">
+          <a href="index.html">Home</a>
+          <span>›</span>
+          <span style="color:rgba(255,255,255,0.6);">Neighbourhoods</span>
+        </div>
+        <div class="nbhd-hero-label">Kelowna, BC</div>
+        <h1 class="nbhd-hero-title">Explore Kelowna's<br/><em>Neighbourhoods</em></h1>
+        <p class="nbhd-hero-sub">Every corner of Kelowna has its own character. Discover the community that fits your lifestyle — from lakefront luxury to family-first hilltops.</p>
+        <!--
+        <div class="nbhd-count-row">
+          <div class="nbhd-count-pill">
+            <strong>10</strong><span>Neighbourhoods</span>
+          </div>
+          <div class="nbhd-count-divider"></div>
+          <div class="nbhd-count-pill">
+            <strong>$200M+</strong><span>In Local Sales</span>
+          </div>
+          <div class="nbhd-count-divider"></div>
+          <div class="nbhd-count-pill">
+            <strong>20+ yrs</strong><span>Industry Expertise</span>
+          </div>
+        -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       MAP
+  ========================================= -->
+  <div id="map">
+    <div class="map-frame-wrap">
+      <div class="map-badge">
+        <span class="map-badge-dot"></span>
+        Kelowna, British Columbia
+      </div>
+      <iframe
+        src="https://maps.google.com/maps?q=Kelowna,+British+Columbia,+Canada&t=m&z=12&ie=UTF8&iwloc=&output=embed"
+        title="Map of Kelowna Neighbourhoods"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- =========================================
+       STICKY NEIGHBOURHOOD NAV
+  ========================================= -->
+  <nav id="nbhd-nav" aria-label="Neighbourhood shortcuts">
+    <div class="container">
+      <div class="nbhd-nav-inner">
+        <a href="#downtown"     class="nbhd-nav-link"><span class="nbhd-nav-num">01</span>Downtown</a>
+        <a href="#lower-mission"class="nbhd-nav-link"><span class="nbhd-nav-num">02</span>Lower Mission</a>
+        <a href="#upper-mission"class="nbhd-nav-link"><span class="nbhd-nav-num">03</span>Upper Mission</a>
+        <a href="#glenmore"     class="nbhd-nav-link"><span class="nbhd-nav-num">04</span>Glenmore</a>
+        <a href="#rutland"      class="nbhd-nav-link"><span class="nbhd-nav-num">05</span>Rutland</a>
+        <a href="#dilworth"     class="nbhd-nav-link"><span class="nbhd-nav-num">06</span>Dilworth</a>
+        <a href="#pandosy"      class="nbhd-nav-link"><span class="nbhd-nav-num">07</span>Pandosy Village</a>
+        <a href="#black-mountain"class="nbhd-nav-link"><span class="nbhd-nav-num">08</span>Black Mountain</a>
+        <a href="#kettle-valley"class="nbhd-nav-link"><span class="nbhd-nav-num">09</span>Kettle Valley</a>
+        <a href="#north-end"    class="nbhd-nav-link"><span class="nbhd-nav-num">10</span>North End</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================
+       NEIGHBOURHOOD SECTIONS
+  ========================================= -->
+  <main id="neighbourhoods">
+
+    <!-- 01 Downtown -->
+    <section class="nbhd-section" id="downtown">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="01">
+          <img src="assets/Downtown.jpeg" alt="Downtown Kelowna">
+        </div>
+        <div class="nbhd-photo-tag">Downtown Kelowna</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">01</div>
+        <h2 class="nbhd-name">Downtown Kelowna</h2>
+        <div class="nbhd-tagline">Where the City Meets the Lake</div>
+        <p class="nbhd-desc">The vibrant heart of Kelowna, Downtown offers a blend of cultural attractions, lakefront parks, and a thriving dining scene. Walkable streets, the famous Waterfront Park, and a growing arts corridor make this one of BC's most livable urban cores. Ideal for professionals and empty-nesters who want everything on their doorstep.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Walk 92</strong><span>Walk Score</span></div>
+          <div class="nbhd-stat"><strong>Lake</strong><span>Waterfront Access</span></div>
+          <div class="nbhd-stat"><strong>Urban</strong><span>Lifestyle</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Downtown Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 02 Lower Mission -->
+    <section class="nbhd-section photo-right" id="lower-mission">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="02">
+          <img src="assets/Lower Mission.jpeg" alt="Lower Mission">
+          <!--
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Lower Mission Photo</p>
+          -->
+        </div>
+        <div class="nbhd-photo-tag">Lower Mission</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">02</div>
+        <h2 class="nbhd-name">Lower Mission</h2>
+        <div class="nbhd-tagline">Lakeside Living at Its Finest</div>
+        <p class="nbhd-desc">Lower Mission is Kelowna's most coveted lakeside community. With prestigious streets like Lakeshore Road, private beach access, and mature tree-lined avenues, it's the address of choice for those who want a waterfront lifestyle without compromise. Excellent schools and a strong community make it equally popular with families.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Lake</strong><span>Beach Access</span></div>
+          <div class="nbhd-stat"><strong>A+</strong><span>Top Schools</span></div>
+          <div class="nbhd-stat"><strong>Estate</strong><span>Properties</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Lower Mission Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 03 Upper Mission -->
+    <section class="nbhd-section" id="upper-mission">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="03">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Upper Mission Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Upper Mission</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">03</div>
+        <h2 class="nbhd-name">Upper Mission</h2>
+        <div class="nbhd-tagline">Elevated Views, Elevated Living</div>
+        <p class="nbhd-desc">Perched above the valley, Upper Mission delivers sweeping panoramic views of Okanagan Lake and the surrounding mountains. Executive homes, master-planned streets, and proximity to hiking trails attract families and professionals alike. New construction continues here, making it one of Kelowna's most dynamic growth areas.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Views</strong><span>Panoramic Lake</span></div>
+          <div class="nbhd-stat"><strong>New</strong><span>Construction</span></div>
+          <div class="nbhd-stat"><strong>Trails</strong><span>Hiking Nearby</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Upper Mission Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 04 Glenmore -->
+    <section class="nbhd-section photo-right" id="glenmore">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="04">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Glenmore Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Glenmore</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">04</div>
+        <h2 class="nbhd-name">Glenmore</h2>
+        <div class="nbhd-tagline">Parks, Schools &amp; Community Spirit</div>
+        <p class="nbhd-desc">Glenmore is a well-established, family-friendly neighbourhood in the heart of Kelowna. With expansive parks, excellent schools, and a mix of housing styles across all price points, it's a top choice for growing families looking for space, convenience, and a strong sense of community.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>12+</strong><span>Parks &amp; Fields</span></div>
+          <div class="nbhd-stat"><strong>A+</strong><span>Top Schools</span></div>
+          <div class="nbhd-stat"><strong>All</strong><span>Price Ranges</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Glenmore Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 05 Rutland -->
+    <section class="nbhd-section" id="rutland">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="05">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Rutland Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Rutland</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">05</div>
+        <h2 class="nbhd-name">Rutland</h2>
+        <div class="nbhd-tagline">Central, Convenient &amp; High Value</div>
+        <p class="nbhd-desc">Rutland offers exceptional value in Kelowna's most central and fastest-growing area. A diverse community with strong commercial services, top schools, and excellent recreational amenities, Rutland is ideal for first-time buyers, young families, and investors who recognise smart opportunity when they see it.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Value</strong><span>Great Entry Price</span></div>
+          <div class="nbhd-stat"><strong>Central</strong><span>Prime Location</span></div>
+          <div class="nbhd-stat"><strong>ROI</strong><span>Invest Potential</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Rutland Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 06 Dilworth Mountain -->
+    <section class="nbhd-section photo-right" id="dilworth">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="06">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Dilworth Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Dilworth Mountain</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">06</div>
+        <h2 class="nbhd-name">Dilworth Mountain</h2>
+        <div class="nbhd-tagline">Executive Homes, City Views</div>
+        <p class="nbhd-desc">Dilworth Mountain rises dramatically above Kelowna's valley floor, offering executive-style homes with sweeping city and lake views. A quiet, prestigious neighbourhood that delivers the space and serenity of a hillside retreat with urban convenience just minutes away.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Views</strong><span>City &amp; Lake</span></div>
+          <div class="nbhd-stat"><strong>Exec</strong><span>Prestige Homes</span></div>
+          <div class="nbhd-stat"><strong>Quiet</strong><span>Private Streets</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Dilworth Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 07 Pandosy Village -->
+    <section class="nbhd-section" id="pandosy">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="07">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Pandosy Village Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Pandosy Village</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">07</div>
+        <h2 class="nbhd-name">Pandosy Village</h2>
+        <div class="nbhd-tagline">Walkable, Vibrant &amp; Sophisticated</div>
+        <p class="nbhd-desc">The Pandosy corridor is one of Kelowna's most walkable and sought-after areas. Boutique shops, farm-to-table restaurants, Okanagan College, and easy access to the beach create a sophisticated urban village atmosphere. A favourite for young professionals, students, and those seeking a connected lifestyle close to the lake.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Walk 85</strong><span>Walk Score</span></div>
+          <div class="nbhd-stat"><strong>Beach</strong><span>5 Min Away</span></div>
+          <div class="nbhd-stat"><strong>OC</strong><span>Campus Nearby</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Pandosy Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 08 Black Mountain -->
+    <section class="nbhd-section photo-right" id="black-mountain">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="08">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Black Mountain Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Black Mountain</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">08</div>
+        <h2 class="nbhd-name">Black Mountain</h2>
+        <div class="nbhd-tagline">Golf, Views &amp; Outdoor Adventure</div>
+        <p class="nbhd-desc">Nestled in the hills east of Kelowna, Black Mountain is centred around the popular Black Mountain Golf Course. Residents enjoy spectacular valley views, quiet cul-de-sacs, and easy access to backcountry trails, ski hills, and wineries — all while being just minutes from city conveniences.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Golf</strong><span>Course Community</span></div>
+          <div class="nbhd-stat"><strong>Views</strong><span>Mountain &amp; Valley</span></div>
+          <div class="nbhd-stat"><strong>Trails</strong><span>Backcountry Access</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Black Mountain Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 09 Kettle Valley -->
+    <section class="nbhd-section" id="kettle-valley">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="09">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add Kettle Valley Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">Kettle Valley</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">09</div>
+        <h2 class="nbhd-name">Kettle Valley</h2>
+        <div class="nbhd-tagline">Master-Planned &amp; Family-First</div>
+        <p class="nbhd-desc">Kettle Valley is one of Kelowna's most thoughtfully designed communities. With its own village centre, an extensive trail network, beautiful parks, and a strong community spirit, it's the go-to choice for families who want a safe, connected lifestyle without sacrificing convenience or natural beauty.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Village</strong><span>Centre &amp; Shops</span></div>
+          <div class="nbhd-stat"><strong>Trails</strong><span>Extensive Network</span></div>
+          <div class="nbhd-stat"><strong>A+</strong><span>Top Schools</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search Kettle Valley Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- 10 North End -->
+    <section class="nbhd-section photo-right" id="north-end">
+      <div class="nbhd-photo-side">
+        <div class="nbhd-photo-placeholder" data-num="10">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#050E3D" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <p>Add North End Photo</p>
+        </div>
+        <div class="nbhd-photo-tag">North End</div>
+      </div>
+      <div class="nbhd-content-side">
+        <a href="#map" class="nbhd-back">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          Back to map
+        </a>
+        <div class="nbhd-num-badge">10</div>
+        <h2 class="nbhd-name">North End</h2>
+        <div class="nbhd-tagline">Character Homes &amp; Creative Community</div>
+        <p class="nbhd-desc">Kelowna's North End is experiencing a creative renaissance. Historic character homes, independent coffee shops, artist studios, and a relaxed neighbourhood feel attract young professionals and those seeking authenticity over cookie-cutter suburbs. Close to the lake, beaches, and Downtown — with more affordable entry points than many comparable areas.</p>
+        <div class="nbhd-stats">
+          <div class="nbhd-stat"><strong>Character</strong><span>Historic Homes</span></div>
+          <div class="nbhd-stat"><strong>Arts</strong><span>Creative District</span></div>
+          <div class="nbhd-stat"><strong>Value</strong><span>Up-and-Coming</span></div>
+        </div>
+        <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-cobalt nbhd-search-btn">
+          Search North End Listings
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================
+       CALL TO ACTION
+  ========================================= -->
+  <section class="nbhd-cta">
+    <div class="container">
+      <div class="nbhd-cta-inner">
+        <div class="nbhd-cta-label">Ready to Move?</div>
+        <h2 class="nbhd-cta-title">Not Sure Which<br/>Neighbourhood Is Right?</h2>
+        <p class="nbhd-cta-sub">Nick knows every street in Kelowna. Book a free consultation and he'll match you with the perfect community for your lifestyle and budget.</p>
+        <div class="nbhd-cta-btns">
+          <a href="https://heyleo.com" target="_blank" rel="noopener noreferrer" class="btn btn-aqua">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Search All Listings
+          </a>
+          <a href="index.html#contact" class="btn btn-aqua-outline">
+            Book a Free Consultation
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+  ========================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="assets/Real%20Logo%20Outline%20Black.png" alt="Real Broker" class="footer-logo" />
+          <div class="footer-divider"></div>
+          <span class="footer-name">Nick Van Rensburg — REALTOR®</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            © 2025 <a href="index.html">KelownaListed.com</a> · Nick Van Rensburg, REALTOR® · Real Broker · All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================= -->
+  <script>
+    // ---- Shared navbar behaviour ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ---- Fade-up animations ----
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); fadeObserver.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+
+    // ---- Sticky neighbourhood nav: active link on scroll ----
+    const nbhdNav     = document.getElementById('nbhd-nav');
+    const sections    = document.querySelectorAll('.nbhd-section[id]');
+    const navLinks    = document.querySelectorAll('.nbhd-nav-link');
+    const mapEl       = document.getElementById('map');
+
+    // Add shadow when scrolled past map
+    const mapObserver = new IntersectionObserver(([entry]) => {
+      nbhdNav.classList.toggle('shadow', !entry.isIntersecting);
+    }, { threshold: 0 });
+    mapObserver.observe(mapEl);
+
+    // Highlight active section in sticky nav
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            const active = link.getAttribute('href') === '#' + id;
+            link.classList.toggle('active', active);
+            // Scroll the nav link into view within the horizontal scroller
+            if (active) {
+              link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+          });
+        }
+      });
+    }, {
+      rootMargin: '-30% 0px -60% 0px',
+      threshold: 0
+    });
+    sections.forEach(s => sectionObserver.observe(s));
+  </script>
+</body>
+</html>
