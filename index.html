@@ -968,8 +968,26 @@
     // Contact form
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('formThankYou').style.display = 'block';
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      fetch('https://formspree.io/f/xvzlnqyg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: this.querySelector('[name="name"]') ? this.querySelector('[name="name"]').value : '',
+          email: this.querySelector('[name="email"]') ? this.querySelector('[name="email"]').value : '',
+          phone: this.querySelector('[name="phone"]') ? this.querySelector('[name="phone"]').value : '',
+          message: this.querySelector('[name="message"]') ? this.querySelector('[name="message"]').value : '',
+          _subject: 'New Contact Form Message — KelownaListed.com'
+        })
+      })
+      .catch(() => {})
+      .finally(() => {
+        this.style.display = 'none';
+        document.getElementById('formThankYou').style.display = 'block';
+      });
     });
 
     // Chat modal
@@ -984,9 +1002,26 @@
 
     document.getElementById('modalForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('modalThankYou').style.display = 'block';
-      setTimeout(closeModal, 2200);
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      fetch('https://formspree.io/f/xvzlnqyg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: this.querySelector('[name="name"]') ? this.querySelector('[name="name"]').value : '',
+          email: this.querySelector('[name="email"]') ? this.querySelector('[name="email"]').value : '',
+          message: this.querySelector('[name="message"]') ? this.querySelector('[name="message"]').value : '',
+          _subject: 'New Chat Message — KelownaListed.com'
+        })
+      })
+      .catch(() => {})
+      .finally(() => {
+        this.style.display = 'none';
+        document.getElementById('modalThankYou').style.display = 'block';
+        setTimeout(closeModal, 2200);
+      });
     });
 
     // ---- Reviews carousel ----
